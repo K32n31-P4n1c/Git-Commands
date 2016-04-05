@@ -8,7 +8,13 @@ git help COMMAND					( Show help for the command )
 
 
 git init						( Initialize git repository )
-git remote add NAME GITHUBREPO				( Add a remote repository ) 
+git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
+git remote 						( Shows information  about the Remoterepo )
+git remote 						( Shows remote repo )
+
+git push -u REMOTEREPONAME master			( Push changes from remoterepo to githubproject )
+git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
+
 
 git add .	// 	git --all			( Add all the changes )
 git add FILENAME					( Add specific change )
@@ -23,6 +29,7 @@ git commit -am "MESSAGE" // git commit -a -m "MESSAGE"	( Adds changes and Commit
 git branch						( Check what branch you are currently on )
 git branch BRANCHNAME					( Create new branch )
 git checkout BRANCHNAME					( Switch to branch )
+GIT branch -d BRANCHNAME				( Delete branch name )
 
 git checkout HEAD FILENAME				( Discards changes in the working directory. )
 git reset HEAD FILENAME					( Remove file from staging area )
