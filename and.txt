@@ -1,0 +1,21 @@
+git --version						( Version )
+git config --global
+git checkout HEAD FILENAME				( Discards changes in the working directory. )
+git reset HEAD FILENAME					( Remove file from staging area )
+git reset --soft HEAD^					( Undo last commit, put changes into stagin )
+git reset --hard HEAD^					( Undo last commit, and all changes )
+git reset --hard HEAD^^					( Undo last 2 commits, and all changes )
+git commit --amend -m "MESSAGE"				( Change the last commit )
+git checkout -- FILENAME				( Blow away all changes since last commit )
+git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
+
+git status						( View Changes )
+
+git log							( View commit history )
+git show HEAD						( Show the most recently commit HEAD )
+git log --author="USER"					( View commit from specific user )
+
+git rm FILENAME						( Delete some file )
+
+
+
