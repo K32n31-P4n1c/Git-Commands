@@ -1,4 +1,4 @@
-# Tutorial
+# Git Commands
 
 git --version						( Version )
 
