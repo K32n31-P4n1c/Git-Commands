@@ -30,6 +30,8 @@ git push -u REMOTEREPONAME master			( Push changes from remoterepo to githubproj
 
 git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
 
+git clone                             ( Clone Repository Into a New Directory )
+
 
 git add .	// 	git --all			( Add all the changes )
 
