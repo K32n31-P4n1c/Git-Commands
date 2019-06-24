@@ -99,11 +99,9 @@ git commit --amend -m "MESSAGE"				( Change the last commit )
 git checkout -- FILENAME				( Blow away all changes since last commit )
 git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
 
-|------------------------------:|---------------------------------------------------------------------------------------|
+| ----------------------------: | ------------------------------------------------------------------------------------- |
 | git log			|							( View commit history )		|
-
 | git show HEAD			|						( Show the most recently commit HEAD )	|
-
 | git log --author="USER"	|						( View commit from specific user )	|
 
 git rm FILENAME						( Delete some file )
