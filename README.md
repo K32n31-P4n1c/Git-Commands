@@ -4,21 +4,21 @@
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
 
-- $ git --version						                                           ( Version )
+- git --version						                                           ( Version )
 
-- $ git config --global user.name "[name]"                             ( Sets the name you want atached to your commit transactions )
+- git config --global user.name "[name]"                             ( Sets the name you want atached to your commit transactions )
 
-- $ git config --global user.email "[email address]"                    ( Sets the email you want atached to your commit transactions )
+- git config --global user.email "[email address]"                    ( Sets the email you want atached to your commit transactions )
 
-- $ git config user.email					                                     ( Show email )
+- git config user.email					                                     ( Show email )
 
-- $ git config user.name                                               ( Show username )
+- git config user.name                                               ( Show username )
 
-* $ git config --global color.ui auto                                  ( Enables helpful colorization of command line output )
+- git config --global color.ui auto                                  ( Enables helpful colorization of command line output )
 
-- $ git config --list					                                         ( List of all Config )
+- git config --list					                                         ( List of all Config )
 
-- $ git help COMMAND					                                         ( Show help for the command )
+- git help COMMAND					                                         ( Show help for the command )
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
@@ -32,13 +32,17 @@ Start a new repository or obtain one from an existing URL
 ### Make Changes
 Review edits and craf a commit transaction
 
-- $ git status  ( Lists all new or modified files to be commited )
+- git status  ( Lists all new or modified files to be commited )
 
-- $ git diff   ( Shows file differences not yet staged )
+- git diff   ( Shows file differences not yet staged )
 
-- $ git add [file]  ( Snapshots the file in preparation for versioning )
+- git add . // git --all    ( Add all the changes )
 
+- - git add *.txt     ( Add all txt files in current directory )
 
+- - git add *.html    ( Add all html files in current directory )
+
+- - git add [File]  ( Snapshots the file in preparation for versioning )
 
 git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
 
