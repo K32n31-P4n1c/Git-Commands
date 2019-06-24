@@ -20,9 +20,18 @@ git config --list					( List of all Config )
 
 git help COMMAND					( Show help for the command )
 
---------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+### Create Repositories
+Start a new repository or obtain one from an existing URL
 
-git init						( Initialize git repository )
+- git init						( Creates a new local repository with the specified name )
+
+- git clone           ( Downloads a project and its entire version history )
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Make Changes
+Review edits and craf a commit transaction
+
 
 git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
 
@@ -36,7 +45,7 @@ git push -u REMOTEREPONAME master			( Push changes from remoterepo to githubproj
 
 git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
 
-git clone                             ( Clone Repository Into a New Directory )
+
 
 
 # git add .	// 	git --all			( Add all the changes )
