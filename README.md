@@ -8,7 +8,7 @@ Configure user information for all local repositories
 
 - git config --global user.name "[name]"                             ( Sets the name you want atached to your commit transactions )
 
-- git config --global user.email "[email address]"                    ( Sets the email you want atached to your commit transactions )
+- git config --global user.email "[email address]"                   ( Sets the email you want atached to your commit transactions )
 
 - git config user.email					                                     ( Show email )
 
@@ -18,7 +18,7 @@ Configure user information for all local repositories
 
 - git config --list					                                         ( List of all Config )
 
-- git help COMMAND					                                         ( Show help for the command )
+- git help [Command]					                                       ( Show help for the command )
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
@@ -38,11 +38,19 @@ Review edits and craf a commit transaction
 
 - git add . // git --all    ( Add all the changes )
 
-- - git add *.txt     ( Add all txt files in current directory )
+  - git add *.txt     ( Add all txt files in current directory )
 
-- - git add *.html    ( Add all html files in current directory )
+  - git add *.html    ( Add all html files in current directory )
 
-- - git add [File]  ( Snapshots the file in preparation for versioning )
+  - git add [File]  ( Snapshots the file in preparation for versioning )
+  
+- git diff --staged   ( Shows file differences between staging and the last file version )
+
+- git reset [File]    ( Unstages the file, but preserve its contents )
+
+- git commit -m "[descriptive message]"   ( Records file snapshots permanently in version history )
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
 
@@ -59,14 +67,7 @@ git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
 
 
 
-# git add .	// 	git --all			( Add all the changes )
-- git add FILENAME					( Add specific change )
-- git add *.txt						( Add all txt files in current directory )
-- git add *.html          ( Add all html files in current directory )
-
-
-
-git diff --staged					( Show stagged differences )
+					( Show stagged differences )
 
 
 git commit -m "MESSAGE"					( Commit the changes )
