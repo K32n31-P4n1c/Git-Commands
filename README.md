@@ -3,22 +3,22 @@
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
-----------------------------------------------------------------------|-----------------------------------------------------------------
-- $ git --version						                                          | ( Version )
 
-- $ git config --global user.name "[name]"                            | ( Sets the name you want atached to your commit transactions )
+- $ git --version						                                           ( Version )
 
-- $ git config --global user.email "[email address]"                  | ( Sets the email you want atached to your commit transactions )
+- $ git config --global user.name "[name]"                             ( Sets the name you want atached to your commit transactions )
 
-- $ git config user.email					                                    | ( Show email )
+- $ git config --global user.email "[email address]"                    ( Sets the email you want atached to your commit transactions )
 
-- $ git config user.name                                              | ( Show username )
+- $ git config user.email					                                     ( Show email )
 
-* $ git config --global color.ui auto                                 | ( Enables helpful colorization of command line output )
+- $ git config user.name                                               ( Show username )
 
-- $ git config --list					                                        | ( List of all Config )
+* $ git config --global color.ui auto                                  ( Enables helpful colorization of command line output )
 
-- $ git help COMMAND					                                        | ( Show help for the command )
+- $ git config --list					                                         ( List of all Config )
+
+- $ git help COMMAND					                                         ( Show help for the command )
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
