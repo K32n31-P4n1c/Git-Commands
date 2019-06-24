@@ -4,7 +4,7 @@
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
 
-git --version						( Version )
+- $ git --version						( Version )
 
 - $ git config --global user.name "[name]"                            ( Sets the name you want atached to your commit transactions )
 
@@ -16,9 +16,9 @@ git --version						( Version )
 
 * $ git config --global color.ui auto                                 ( Enables helpful colorization of command line output )
 
-git config --list					( List of all Config )
+- $ git config --list					( List of all Config )
 
-git help COMMAND					( Show help for the command )
+- $ git help COMMAND					( Show help for the command )
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
