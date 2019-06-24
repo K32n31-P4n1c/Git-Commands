@@ -32,6 +32,13 @@ Start a new repository or obtain one from an existing URL
 ### Make Changes
 Review edits and craf a commit transaction
 
+- $ git status  ( Lists all new or modified files to be commited )
+
+- $ git diff   ( Shows file differences not yet staged )
+
+- $ git add [file]  ( Snapshots the file in preparation for versioning )
+
+
 
 git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
 
@@ -54,7 +61,6 @@ git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
 - git add *.html          ( Add all html files in current directory )
 
 
-git diff						( Show unstaged differences since last commit )
 
 git diff --staged					( Show stagged differences )
 
@@ -88,7 +94,6 @@ git commit --amend -m "MESSAGE"				( Change the last commit )
 git checkout -- FILENAME				( Blow away all changes since last commit )
 git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
 
-git status						( View Changes )
 
 git log							( View commit history )
 
@@ -99,3 +104,8 @@ git log --author="USER"					( View commit from specific user )
 git rm FILENAME						( Delete some file )
 
 git rm --cached FILENAME      ( Delete file, delete file from stagged area )
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Group Changes
+Name a series of commits and combine completed efforts
