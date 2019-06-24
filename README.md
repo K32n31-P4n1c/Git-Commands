@@ -1,12 +1,16 @@
 ### Git Commands
 
+
+### CONFIGURE TOOLING
+Configure user information for all local repositories
+
 git --version						( Version )
 
-git config --global user.name "USERNAME"		( Create Username )
+$ git config --global user.name "[name]"                            ( Sets the name you want atached to your commit transactions )
 
-git config user.name					( Show Username )
+git config user.name					( Show Username )                     ( Sets the email you want atached to your commit transactions )
 
-git config --global user.email "EMAIL"			( Create E-mail )
+$ git config --global user.email "[email address]"
 
 git config user.email					( Show email )
 
