@@ -14,7 +14,7 @@ git config --list					( List of all Config )
 
 git help COMMAND					( Show help for the command )
 
-
+--------------------------------------------------------------------------------------------------------------------------------
 
 git init						( Initialize git repository )
 
@@ -38,6 +38,7 @@ git add .	// 	git --all			( Add all the changes )
 git add FILENAME					( Add specific change )
 
 git add *.txt						( Add all txt files in current directory )
+git add *.html          ( Add all html files in current directory )
 
 
 git diff						( Show unstaged differences since last commit )
@@ -83,3 +84,5 @@ git show HEAD						( Show the most recently commit HEAD )
 git log --author="USER"					( View commit from specific user )
 
 git rm FILENAME						( Delete some file )
+
+git rm --cached FILENAME      ( Delete file, added file from stagged area )
