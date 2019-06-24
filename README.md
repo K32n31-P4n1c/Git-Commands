@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
-----------------------------------------------------------------------------------------------------------------------------------------
+
 - $ git --version						                                          | ( Version )
 
 - $ git config --global user.name "[name]"                            | ( Sets the name you want atached to your commit transactions )
