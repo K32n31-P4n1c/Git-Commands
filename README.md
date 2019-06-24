@@ -4,7 +4,7 @@
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
 
-- git --version						                                           ( Version )
+- git --version						                                           ( Check Version )
 
 - git config --global user.name "[name]"                             ( Sets the name you want atached to your commit transactions )
 
@@ -51,6 +51,72 @@ Review edits and craf a commit transaction
 - git commit -m "[descriptive message]"   ( Records file snapshots permanently in version history )
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+### Group Changes
+Name a series of commits and combine completed efforts
+
+- git branch					( Lists all local branches in the current repository )
+
+- git branch [branch-name]			( Creates a new branch )
+
+- git checkout [branch-name]			( Switches to the specified branch and updates the working directory )
+
+- git merge [branch]				( Combines the specified branch’s history into the current branch )
+
+- git branch -d [branch-name]			( Deletes the specified branch )
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Refactor Filenames
+Relocate and remove versioned files
+
+- git rm [file]					( Deletes the file from the working directory and stages the deletion )
+
+- git rm --cached [file]			( Removes the file from version control but preserves the file locally )
+
+- git mv [file-original][file-renamed]		( Changes the file name and prepares it for commit )
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Review History
+Browse and ispect the evolution of project files
+
+- git log					( Lists version history for the current branch, Check what branch you are currently on )
+
+- git log --follow [file]			( Lists version history for a file, including renames )
+
+- git log --author="[User]"			( Lists commit from specific user )
+
+- git show HEAD					( Show the most recently commit HEAD )
+
+- git diff [first-branch]...[second-branch]	( Shows content differences between two branches )
+
+- git show [commit]				( Outputs metadata and content changes of the specified commit )
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Redo Commits
+Erase mistakes and craft replacement history
+
+- git reset [commit]				( Undoes all commits after [commit], preserving changes locally )
+
+- git reset --hard [commit]			( Discard all history and changes back to the specified commit )
+
+----------------------------------------------------------------------------------------------------------------------------------------
+### Save Fragments
+Shelve and restore incomplete changes
+
+- git stash					( Temporarily stores all modified tracked files )
+
+- git stash pop					( Restores the most recently stashed files )
+
+- git stash list				( Lists all stashed changesets )
+
+- git stash drop				( Discards the most recently stashed changeset
+
+
+
+
+
+
+
 
 git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
 
@@ -75,13 +141,6 @@ git commit -m "MESSAGE"					( Commit the changes )
 git commit -am "MESSAGE" // git commit -a -m "MESSAGE"	( Adds changes and Commit in same time )
 
 
-git branch						( Check what branch you are currently on )
-
-git branch BRANCHNAME					( Create new branch )
-
-git checkout BRANCHNAME					( Switch to branch )
-
-GIT branch -d BRANCHNAME				( Delete branch name )
 
 
 git checkout HEAD FILENAME				( Discards changes in the working directory. )
@@ -99,12 +158,9 @@ git commit --amend -m "MESSAGE"				( Change the last commit )
 git checkout -- FILENAME				( Blow away all changes since last commit )
 git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
 
-| ----------------------------: | ------------------------------------------------------------------------------------- |
-| git log			|							( View commit history )		|
-| git show HEAD			|						( Show the most recently commit HEAD )	|
-| git log --author="USER"	|						( View commit from specific user )	|
 
-git rm FILENAME						( Delete some file )
+
+
 
 git rm --cached FILENAME      ( Delete file, delete file from stagged area )
 
