@@ -1,4 +1,4 @@
-# Git Commands
+### Git Commands
 
 git --version						( Version )
 
@@ -33,12 +33,10 @@ git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
 git clone                             ( Clone Repository Into a New Directory )
 
 
-git add .	// 	git --all			( Add all the changes )
-
-git add FILENAME					( Add specific change )
-
-git add *.txt						( Add all txt files in current directory )
-git add *.html          ( Add all html files in current directory )
+# git add .	// 	git --all			( Add all the changes )
+- git add FILENAME					( Add specific change )
+- git add *.txt						( Add all txt files in current directory )
+- git add *.html          ( Add all html files in current directory )
 
 
 git diff						( Show unstaged differences since last commit )
@@ -85,4 +83,4 @@ git log --author="USER"					( View commit from specific user )
 
 git rm FILENAME						( Delete some file )
 
-git rm --cached FILENAME      ( Delete file, added file from stagged area )
+git rm --cached FILENAME      ( Delete file, delete file from stagged area )
