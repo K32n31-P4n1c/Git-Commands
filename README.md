@@ -1,6 +1,6 @@
-### Git Commands
+### GIT COMMANDS
 
-
+----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
 
