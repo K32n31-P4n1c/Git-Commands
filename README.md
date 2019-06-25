@@ -1,8 +1,8 @@
 ###### GIT COMMANDS
 
-###[Interactive cheatsheet](http://ndpsoftware.com/git-cheatsheet.html#loc=stash;)
+[Interactive cheatsheet](http://ndpsoftware.com/git-cheatsheet.html#loc=stash;)
 
-###[Setting up a repository help tutorial](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
+[Setting up a repository help tutorial](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
