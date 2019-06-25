@@ -1,6 +1,7 @@
 ###### GIT COMMANDS
 
-[Interactive cheatsheet](http://ndpsoftware.com/git-cheatsheet.html#loc=stash;)
+###[Interactive cheatsheet](http://ndpsoftware.com/git-cheatsheet.html#loc=stash;)
+###[Setting up a repository help tutorial](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
@@ -110,15 +111,15 @@ Erase mistakes and craft replacement history
 
 - git reset [commit]				( Undoes all commits after [commit], preserving changes locally )
 
-- - git reset --hard [commit]			( Discard all history and changes back to the specified commit )
+  - git reset --hard [commit]			( Discard all history and changes back to the specified commit )
 
-- - git reset HEAD [Filename]			( Remove file from staging area )
+  - git reset HEAD [Filename]			( Remove file from staging area )
 
-- - git reset --hard HEAD^			( Undo last commit, and all changes )
+  - git reset --hard HEAD^			( Undo last commit, and all changes )
 
-- - git reset --hard HEAD^^			( Undo last 2 commits, and all changes )
+  - git reset --hard HEAD^^			( Undo last 2 commits, and all changes )
 
-- - git reset --soft HEAD^			( Undo last commit, put changes into stagin )
+  - git reset --soft HEAD^			( Undo last commit, put changes into stagin )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -145,11 +146,3 @@ Register a repository bookmark and exchange version history
 - git push [alias][branch]			( Uploads all local branch commits to GitHub )
 
 - git pull [ Remotename ] [master]		( Downloads bookmark history and incorporates changes )
-
-
-
-
-
-
-git checkout -- FILENAME				( Blow away all changes since last commit )
-git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
