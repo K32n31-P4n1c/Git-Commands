@@ -4,6 +4,7 @@
 
 [Setting up a repository help tutorial](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
@@ -28,6 +29,7 @@ Configure user information for all local repositories
 
 - git help [Command]					              	 ( Show help for the command )
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
 Start a new repository or obtain one from an existing URL
@@ -35,6 +37,7 @@ Start a new repository or obtain one from an existing URL
 - $ git init [project-name]					( Creates a new local repository with the specified name )
 
 - $ git clone [url]          ( Downloads a project and its entire version history )
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Make Changes
@@ -147,3 +150,6 @@ Register a repository bookmark and exchange version history
 - git push [alias][branch]			( Uploads all local branch commits to GitHub )
 
 - git pull [ Remotename ] [master]		( Downloads bookmark history and incorporates changes )
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
