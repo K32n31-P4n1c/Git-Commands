@@ -1,5 +1,7 @@
 ###### GIT COMMANDS
 
+[Interactive cheatsheet](http://ndpsoftware.com/git-cheatsheet.html#loc=stash;)
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### CONFIGURE TOOLING
 Configure user information for all local repositories
@@ -18,7 +20,11 @@ Configure user information for all local repositories
 
 - git config --list					                                         ( List of all Config )
 
-- git help [Command]					                                       ( Show help for the command )
+- git remote								( Shows info about the remote repo )
+
+- git remote add [RemoteRepoName] [Github Repo adress]			( Add a remote repository ) 
+
+- git help [Command]					              	 ( Show help for the command )
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
@@ -50,6 +56,11 @@ Review edits and craf a commit transaction
 
 - git commit -m "[descriptive message]"   ( Records file snapshots permanently in version history )
 
+- git commit -am "MESSAGE" // git commit -a -m "MESSAGE"	( Adds changes and Commit in same time )
+
+- git commit --amend -m "MESSAGE"				( Change the last commit )
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Group Changes
 Name a series of commits and combine completed efforts
@@ -75,6 +86,7 @@ Relocate and remove versioned files
 
 - git mv [file-original][file-renamed]		( Changes the file name and prepares it for commit )
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Review History
 Browse and ispect the evolution of project files
@@ -91,13 +103,23 @@ Browse and ispect the evolution of project files
 
 - git show [commit]				( Outputs metadata and content changes of the specified commit )
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Redo Commits
 Erase mistakes and craft replacement history
 
 - git reset [commit]				( Undoes all commits after [commit], preserving changes locally )
 
-- git reset --hard [commit]			( Discard all history and changes back to the specified commit )
+- - git reset --hard [commit]			( Discard all history and changes back to the specified commit )
+
+- - git reset HEAD [Filename]			( Remove file from staging area )
+
+- - git reset --hard HEAD^			( Undo last commit, and all changes )
+
+- - git reset --hard HEAD^^			( Undo last 2 commits, and all changes )
+
+- - git reset --soft HEAD^			( Undo last commit, put changes into stagin )
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Save Fragments
@@ -109,62 +131,25 @@ Shelve and restore incomplete changes
 
 - git stash list				( Lists all stashed changesets )
 
-- git stash drop				( Discards the most recently stashed changeset
-
-
-
-
-
-
-
-
-git remote add REMOTEREPONAME GITHUB_REPO_ADDRES		( Add a remote repository ) 
-
-git remote 						( Shows information  about the Remoterepo )
-
-git remote 						( Shows remote repo )
-
-
-
-git push -u REMOTEREPONAME master			( Push changes from remoterepo to githubproject )
-
-git pull REMOTEREPONAME master				( Pull changes from github to remoterepo )
-
-
-
-
-					( Show stagged differences )
-
-
-git commit -m "MESSAGE"					( Commit the changes )
-
-git commit -am "MESSAGE" // git commit -a -m "MESSAGE"	( Adds changes and Commit in same time )
-
-
-
-
-git checkout HEAD FILENAME				( Discards changes in the working directory. )
-
-git reset HEAD FILENAME					( Remove file from staging area )
-
-git reset --soft HEAD^					( Undo last commit, put changes into stagin )
-
-git reset --hard HEAD^					( Undo last commit, and all changes )
-
-git reset --hard HEAD^^					( Undo last 2 commits, and all changes )
-
-git commit --amend -m "MESSAGE"				( Change the last commit )
-
-git checkout -- FILENAME				( Blow away all changes since last commit )
-git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
-
-
-
-
-
-git rm --cached FILENAME      ( Delete file, delete file from stagged area )
+- git stash drop				( Discards the most recently stashed changeset )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-### Group Changes
-Name a series of commits and combine completed efforts
+### Synchronize Changes
+Register a repository bookmark and exchange version history
+
+- git fetch [bookmark]				( Downloads all history from the repository bookmark )
+
+- git merge [bookmark]/[branch]			( Combines bookmark`s branch into current local branch )
+
+- git push [alias][branch]			( Uploads all local branch commits to GitHub )
+
+- git pull [ Remotename ] [master]		( Downloads bookmark history and incorporates changes )
+
+
+
+
+
+
+git checkout -- FILENAME				( Blow away all changes since last commit )
+git reset SHA						( RCan be used to reset to a previous commit in your commit history., need jst frst 7digits )
