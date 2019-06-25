@@ -1,4 +1,4 @@
-###### GIT COMMANDS
+######GIT COMMANDS
 
 [Visual Git Cheat Sheet ](http://ndpsoftware.com/git-cheatsheet.html#loc=stash;)
 
@@ -76,7 +76,7 @@ Name a series of commits and combine completed efforts
 
 - git branch [Branch-name]			          ( Creates a new branch )
 
-- git checkout  [Branch-name]           	( Switches to the specified branch and updates the working directory )
+- git checkout [Branch-name]           	( Switches to the specified branch and updates the working directory )
 
 - git merge [Branch]	              ( Combines the specified branch’s history into the current branch )
 
