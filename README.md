@@ -100,9 +100,9 @@ Browse and ispect the evolution of project files
 
 - git log					( Lists version history for the current branch, Check what branch you are currently on )
 
-- - git log --follow [file]			( Lists version history for a file, including renames )
+  - git log --follow [file]			( Lists version history for a file, including renames )
 
-- - git log --author="[User]"			( Lists commit from specific user )
+  - git log --author="[User]"			( Lists commit from specific user )
 
 - git show HEAD					( Show the most recently commit HEAD )
 
