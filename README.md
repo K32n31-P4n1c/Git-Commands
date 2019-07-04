@@ -78,6 +78,8 @@ Name a series of commits and combine completed efforts
 
 - git checkout [Branch-name]           	( Switches to the specified branch and updates the working directory )
 
+- git checkout [commit number]          ( Getting Old Versions from the Repository )
+
 - git merge [Branch]	              ( Combines the specified branch’s history into the current branch )
 
 - git branch -d [branch-name]			        ( Deletes the specified branch )
