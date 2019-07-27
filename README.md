@@ -15,11 +15,11 @@ Configure user information for all local repositories
 
 - git config --global user.name "[name]"                             ( Sets the name you want atached to your commit transactions )
 
+   - git config user.email					                                     ( Show email )
+
 - git config --global user.email "[email address]"                   ( Sets the email you want atached to your commit transactions )
 
-- git config user.email					                                     ( Show email )
-
-- git config user.name                                               ( Show username )
+   - git config user.name                                               ( Show username )
 
 - git config --global color.ui auto                                  ( Enables helpful colorization of command line output )
 
@@ -36,26 +36,32 @@ Configure user information for all local repositories
 ### Create Repositories
 Start a new repository or obtain one from an existing URL
 
-- $ git init [project-name]					( Creates a new local repository with the specified name )
+- $ git init        ( Transform the current directory into a Git repository )
 
-- $ git clone [url]          ( Downloads a project and its entire version history )
+   - git init [project-name]			( Creates a new local repository with the specified name )
+
+   - git init [directory]               ( Create an empty Git repository in the specified directory )
+
+- $ git clone [repo-url]          ( Downloads a project and its entire version history from repo to local machine )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Make Changes
 Review edits and craf a commit transaction
 
-- git status  ( Lists all new or modified files to be commited )
+- git status  ( Lists which files are staged, unstaged, and untracked )
 
 - git diff   ( Shows file differences not yet staged )
 
-- git add . // git --all    ( Add all the changes )
+- git add . // git --all    ( Stage all the changes )
 
-  - git add *.txt     ( Add all txt files in current directory )
+  - git add *.txt     ( Stage all txt files in current directory )
 
-  - git add *.html    ( Add all html files in current directory )
+  - git add *.html    ( Stage all html files in current directory )
 
-  - git add [File]  ( Snapshots the file in preparation for versioning )
+  - git add [File]  ( Stage current file in preparation for next commit )
+
+  - git add [Directory]     ( Stage all changes in directory for next commit )
   
 - git diff --staged   ( Shows file differences between staging and the last file version )
 
