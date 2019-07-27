@@ -25,79 +25,91 @@ Configure user information for all local repositories
 
 - git config --list					                                         ( List of all Config )
 
-- git remote								( Shows info about the remote repo )
-
-- git remote add [RemoteRepoName] [Github Repo adress]			( Add a remote repository ) 
-
 - git help [Command]					              	 ( Show help for the command )
+
+- git config --global alias.[shortcut] [command]      ( Aliases are used to create shorter commands that map to longer commands )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Create Repositories
 Start a new repository or obtain one from an existing URL
 
-- $ git init        ( Transform the current directory into a Git repository )
+- $ git init                                        ( Transform the current directory into a Git repository )
 
-   - git init [project-name]			( Creates a new local repository with the specified name )
+  - git init [project-name]			                ( Creates a new local repository with the specified name )
 
-   - git init [directory]               ( Create an empty Git repository in the specified directory )
+  - git init [directory]                            ( Create an empty Git repository in the specified directory )
 
-- $ git clone [repo-url]          ( Downloads a project and its entire version history from repo to local machine )
+- $ git clone [repo-url]                            ( Downloads a project and its entire version history from repo to local machine )
+
+- git remote add [RemoteRepoName] [Repo-url]		( Create a new connection to a remote repo ) 
+
+  - git remote								        ( Shows info about the remote repo )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Make Changes
 Review edits and craf a commit transaction
 
-- git status  ( Lists which files are staged, unstaged, and untracked )
+- git status                ( Lists which files are staged, unstaged, and untracked )
 
-- git diff   ( Shows file differences not yet staged )
+- git diff                  ( Show unstaged changes between your index and working directory )
+
+  - git diff --staged       ( Shows file differences between staging and the last file version )
+
+  - git diff HEAD           ( Show difference between working directory and last commit )
+
+  - git diff --cached       ( Show difference between staged changes and last commit )    
+
+  - git diff [first-branch]...[second-branch]	( Shows content differences between two branches )
 
 - git add . // git --all    ( Stage all the changes )
 
-  - git add *.txt     ( Stage all txt files in current directory )
+  - git add -p              ( Review each of the changes , and select which change is goning to be staged )
 
-  - git add *.html    ( Stage all html files in current directory )
+  - git add *.txt           ( Stage all txt files in current directory )
 
-  - git add [File]  ( Stage current file in preparation for next commit )
+  - git add *.html          ( Stage all html files in current directory )
+
+  - git add [File]          ( Stage current file in preparation for next commit )
 
   - git add [Directory]     ( Stage all changes in directory for next commit )
-  
-- git diff --staged   ( Shows file differences between staging and the last file version )
 
-- git reset [File]    ( Unstages the file, but preserve its contents )
+- git commit -m "Message]"   ( Records file snapshots permanently in version history )
 
-- git commit -m "[descriptive message]"   ( Records file snapshots permanently in version history )
+  - git commit -am "Message" // git commit -a -m "MESSAGE"	( Adds changes and Commit in same time )
 
-- git commit -am "MESSAGE" // git commit -a -m "MESSAGE"	( Adds changes and Commit in same time )
+  - git commit --amend -m "Message"	 ( Replace the last commit with the staged changes and last commit combined )
 
-- git commit --amend -m "MESSAGE"				( Change the last commit )
+- git rebase [base]         ( Rebase the current branch onto base. Base can be commit ID, Branch name, tag )
+
+- git reset [File]          ( Unstages the file, but preserve its contents )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Group Changes
 Name a series of commits and combine completed efforts
 
-- git branch					( Lists all local branches in the current repository )
+- git branch					        ( Lists all local branches in the current repository )
 
-- git branch [Branch-name]			          ( Creates a new branch )
+  - git branch [Branch-name]			    ( Creates a new branch )
 
-- git checkout [Branch-name]           	( Switches to the specified branch and updates the working directory )
+  - git checkout [Branch-name]           	( Switches to the specified branch and updates the working directory )
 
-- git checkout [commit number]          ( Getting Old Versions from the Repository )
+  - git checkout -b [Branch-name]           ( Create and switch to a new branch)
 
-- git merge [Branch]	              ( Combines the specified branch’s history into the current branch )
+  - git checkout [commit number]          ( Getting Old Versions from the Repository )
 
-- git branch -d [branch-name]			        ( Deletes the specified branch )
+  - git branch -d [branch-name]			( Deletes the specified branch )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Refactor Filenames
 Relocate and remove versioned files
 
-- git rm [file]					( Deletes the file from the working directory and stages the deletion )
+- git rm [file]					            ( Deletes the file from the working directory and stages the deletion )
 
-- git rm --cached [file]			( Removes the file from version control but preserves the file locally )
+- git rm --cached [file]			        ( Removes the file from version control but preserves the file locally )
 
 - git mv [file-original][file-renamed]		( Changes the file name and prepares it for commit )
 
@@ -106,15 +118,15 @@ Relocate and remove versioned files
 ### Review History
 Browse and ispect the evolution of project files
 
-- git log					( Lists version history for the current branch, Check what branch you are currently on )
+- git log					( Display the entire commit history for the current branch, Check what branch you are currently on )
+
+  - git log --oneline --decorate --all --graph      ( Compresed view with decoration and art )
 
   - git log --follow [file]			( Lists version history for a file, including renames )
 
   - git log --author="[User]"			( Lists commit from specific user )
 
 - git show HEAD					( Show the most recently commit HEAD )
-
-- git diff [first-branch]...[second-branch]	( Shows content differences between two branches )
 
 - git show [commit]				( Outputs metadata and content changes of the specified commit )
 
@@ -125,9 +137,11 @@ Erase mistakes and craft replacement history
 
 - git reset [commit]				( Undoes all commits after [commit], preserving changes locally )
 
-  - git reset --hard [commit]			( Discard all history and changes back to the specified commit )
+  - git reset -p                    ( Unstange individual changes )
 
-  - git reset HEAD [Filename]			( Remove file from staging area )
+  - git reset --hard [commit]		( Discard all history and changes back to the specified commit )
+
+  - git reset HEAD [Filename]		( Remove file from staging area )
 
   - git reset --hard HEAD^			( Undo last commit, and all changes )
 
@@ -153,13 +167,15 @@ Shelve and restore incomplete changes
 ### Synchronize Changes
 Register a repository bookmark and exchange version history
 
-- git fetch [bookmark]				( Downloads all history from the repository bookmark )
+- git fetch [bookmark]				    ( Downloads all history from the repository bookmark )
 
 - git merge [bookmark]/[branch]			( Combines bookmark`s branch into current local branch )
 
-- git push [alias][branch]			( Uploads all local branch commits to GitHub )
+- git merge [Branch]	                ( Combines the specified branch’s history into the current branch )
 
-- git pull [ Remotename ] [master]		( Downloads bookmark history and incorporates changes )
+- git push [Remotename] [branch]		( Uploads all local branch commits to GitHub )
+
+- git pull [Remotename] [master]		( Downloads bookmark history and incorporates changes )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
