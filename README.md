@@ -17,7 +17,7 @@ Configure user information for all local repositories
 
    - git config user.email					                                     ( Show email )
 
-- git config --global user.email "[email address]"                   ( Sets the email you want atached to your commit transactions )
+- git config --global user.email "[email-address]"                   ( Sets the email you want atached to your commit transactions )
 
    - git config user.name                                               ( Show username )
 
@@ -28,6 +28,10 @@ Configure user information for all local repositories
 - git help [Command]					              	 ( Show help for the command )
 
 - git config --global alias.[shortcut] [command]      ( Aliases are used to create shorter commands that map to longer commands )
+
+- git config --system core.editor [editor]            ( Set text editor used by commands for all users on the machine )
+
+- git config --global --edit                          ( Open the global configuration file in a text editor for manual editing )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -42,9 +46,9 @@ Start a new repository or obtain one from an existing URL
 
 - $ git clone [repo-url]                            ( Downloads a project and its entire version history from repo to local machine )
 
-- git remote add [RemoteRepoName] [Repo-url]		( Create a new connection to a remote repo ) 
+- git remote add [RemoteRepoName] [Repo-url]		    ( Create a new connection to a remote repo ) 
 
-  - git remote								        ( Shows info about the remote repo )
+  - git remote								                ( Shows info about the remote repo )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -81,9 +85,8 @@ Review edits and craf a commit transaction
 
   - git commit --amend -m "Message"	 ( Replace the last commit with the staged changes and last commit combined )
 
-- git rebase [base]         ( Rebase the current branch onto base. Base can be commit ID, Branch name, tag )
+- git rebase [base]         ( Rebase the current branch onto base. Base can be commit ID, Branch name, tag, Master )
 
-- git reset [File]          ( Unstages the file, but preserve its contents )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -98,9 +101,11 @@ Name a series of commits and combine completed efforts
 
   - git checkout -b [Branch-name]           ( Create and switch to a new branch)
 
-  - git checkout [commit number]          ( Getting Old Versions from the Repository )
-
   - git branch -d [branch-name]			( Deletes the specified branch )
+
+- git checkout [commit ID]          ( View older commit. Working directory match exact state of the ID commit )
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -126,6 +131,8 @@ Browse and ispect the evolution of project files
 
   - git log --author="[User]"			( Lists commit from specific user )
 
+  - git log [File]                  ( Lists commit that include specific file )
+ 
 - git show HEAD					( Show the most recently commit HEAD )
 
 - git show [commit]				( Outputs metadata and content changes of the specified commit )
@@ -135,11 +142,11 @@ Browse and ispect the evolution of project files
 ### Redo Commits
 Erase mistakes and craft replacement history
 
-- git reset [commit]				( Undoes all commits after [commit], preserving changes locally )
+- git reset [commitID]				( Undoes all commits after [commit], preserving changes locally )
+
+  - git reset --hard [commitID]		( Discard all history and changes back to the specified commit )
 
   - git reset -p                    ( Unstange individual changes )
-
-  - git reset --hard [commit]		( Discard all history and changes back to the specified commit )
 
   - git reset HEAD [Filename]		( Remove file from staging area )
 
@@ -148,6 +155,19 @@ Erase mistakes and craft replacement history
   - git reset --hard HEAD^^			( Undo last 2 commits, and all changes )
 
   - git reset --soft HEAD^			( Undo last commit, put changes into stagin )
+
+  - git reset [File]          ( Unstages the file, but preserve its contents )
+
+- git revert [commitID]            ( Create new commit that undoes all of the changes in commitID, than apply it to the current branch )
+
+  - git revert HEAD              ( HEAD will revery the latest commit )
+
+- git clean -n                   ( Shows which untracked files are going to be removed without actually removing them )
+
+  - git clean -f                 ( Initiates the actual deletion of untracked files )
+
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
