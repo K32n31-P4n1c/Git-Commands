@@ -84,11 +84,12 @@ Review edits and craf a commit transaction
   - git commit -am "Message" // git commit -a -m "MESSAGE"	( Adds changes and Commit in same time )
 
   - git commit --amend -m "Message"	 ( Replace the last commit with the staged changes and last commit combined )
+  
+  - git commit --fixup [commitID]   ( Fix an old commit )
 
 - git rebase [base]         ( Rebase the current branch onto base. Base can be commit ID, Branch name, tag, Master )
 
-
-
+ 
 ----------------------------------------------------------------------------------------------------------------------------------------
 ### Group Changes
 Name a series of commits and combine completed efforts
@@ -104,8 +105,6 @@ Name a series of commits and combine completed efforts
   - git branch -d [branch-name]			( Deletes the specified branch )
 
 - git checkout [commit ID]          ( View older commit. Working directory match exact state of the ID commit )
-
-
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -139,12 +138,18 @@ Browse and ispect the evolution of project files
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-### Redo Commits
+### Undo Mistakes
 Erase mistakes and craft replacement history
 
-- git reset [commitID]				( Undoes all commits after [commit], preserving changes locally )
+- git restore .             ( Discard all uncommited changes, 
+   
+   - git restore [Filename]      ( Discard uncommited local changes to a file, also works for deleted files )
 
-  - git reset --hard [commitID]		( Discard all history and changes back to the specified commit )
+- git reset [commitID]				( Undoes all commits after [commit], sets the pointer head to commitID )
+
+  - git reset --hard [commitID]		( Discard all history and changes back to the specified commit, deletes local changes )
+  
+  - git reset --mixed [commitId]    ( Discard all history and changes back to specified commit, keeps local changes )
 
   - git reset -p                    ( Unstange individual changes )
 
@@ -165,9 +170,6 @@ Erase mistakes and craft replacement history
 - git clean -n                   ( Shows which untracked files are going to be removed without actually removing them )
 
   - git clean -f                 ( Initiates the actual deletion of untracked files )
-
-
-
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
