@@ -104,6 +104,10 @@ Name a series of commits and combine completed efforts
 
   - git branch -d [branch-name]			( Deletes the specified branch )
 
+- git branch -m [branch-name-new]      (Raneme the current branch to branch-name-new)
+   
+   - git branch -m [branch-name-old] [branch-name-new]      ( Rename non-head branch )
+
 - git checkout [commit ID]          ( View older commit. Working directory match exact state of the ID commit )
 
 
